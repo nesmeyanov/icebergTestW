@@ -14,7 +14,7 @@
     <div id="header">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3 col-xl-3 col-lg-3">
             <div class="call_numbers">
               <span>(096) 673-70-09</span>
               <span>(096) 673-70-09</span>
@@ -23,22 +23,22 @@
               <button type="button" class="btn btn-success call_back_btn"><img src="/icons/phone-receiver.png" alt="call_icon"> Обратный звонок</button>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-xl-6 col-lg-6">
             <div class="store_name">
               <h2>Eco.look</h2>
             </div>
             <div class="goods_categories">
-              <div>Косметика</div>
-              <div>Витамины</div>
-              <div>Добавки</div>
-              <div>Детский мир</div>
+              <div>Косметика <a href="#"><img src="/icons/down-arrow1.png" alt="arrow"></a></div>
+              <div>Витамины <a href="#"><img src="/icons/down-arrow1.png" alt="arrow"></a></div>
+              <div>Добавки <a href="#"><img src="/icons/down-arrow1.png" alt="arrow"></a></div>
+              <div>Детский мир <a href="#"><img src="/icons/down-arrow1.png" alt="arrow"></a></div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-xl-3 col-lg-3">
             <div class="cart_field">
               <img src="/icons/online-shopping-cart (1).png" alt="cart_icon">
               <span>Корзина</span>
-              <span>(0)</span>
+              <span class="numbers_of_good">(0)</span>
             </div>
             <div class="search_goods">
               <form class="example" action="/pages/search.html">
@@ -53,12 +53,12 @@
   
     <div id="slider">
       <div class="slider_field">
-        <div class="card_slider"><img src="/icons/NoPath.png" alt=""></div>
-        <div class="card_slider"><img src="/icons/NoPath.png" alt=""></div>
-        <div class="card_slider"><img src="/icons/NoPath.png" alt=""></div>
-        <div class="card_slider"><img src="/icons/NoPath.png" alt=""></div>
-        <div class="card_slider"><img src="/icons/NoPath.png" alt=""></div>
-        <div class="card_slider"><img src="/icons/NoPath.png" alt=""></div>
+        <div class="card_slider"><img src="/icons/NoPath.png" alt="slider" class="card_slider_item"></div>
+        <div class="card_slider"><img src="/icons/NoPath.png" alt="slider"></div>
+        <div class="card_slider"><img src="/icons/NoPath.png" alt="slider"></div>
+        <div class="card_slider"><img src="/icons/NoPath.png" alt="slider"></div>
+        <div class="card_slider"><img src="/icons/NoPath.png" alt="slider"></div>
+        <div class="card_slider"><img src="/icons/NoPath.png" alt="slider"></div>
       </div>
     </div>
   
@@ -234,9 +234,9 @@
       </div>
       <div class="footer_block">
         <div class="footer_text_info">
-          <div class="delivery"><span>
-            Доставка и оплата
-          </span></div>
+          <div class="delivery">
+            <a href="/pages/deliver.html">Доставка и оплата</a>
+          </div>
           <div class="company_info"><span>О компании</span></div>
         </div>
         <div class="footer_social">
@@ -269,5 +269,35 @@
       nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
     });
   </script>
+  <script>
+  $('.all_popular_goods').slick({
+  speed: 300,
+  slidesToShow: 6,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});</script>
 </body>
 </html>

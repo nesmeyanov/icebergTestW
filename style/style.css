@@ -1,6 +1,23 @@
-/* #global-wraper {
-  max-width: 1571px;
-} */
+@font-face {
+  font-family: MonserratRegular;
+  src: url(/fonts/Montserrat-Regular.ttf);
+  /* src: url(/fonts/montserrat.woff);
+  src: url(/fonts/montserrat.woff2);
+  font-weight: normal; */
+}
+
+@font-face {
+  font-family: MonserratBold;
+  src: url(/fonts/Montserrat-Bold.ttf);
+  /* src: url(/fonts/montserratbold.woff);
+  src: url(/fonts/montserratbold.woff2); */
+}
+
+@font-face {
+  font-family: ptserif;
+  src: url(/fonts/ptserif.ttf);
+  font-weight: normal;
+}
 
 th {
   font-weight: normal;
@@ -10,44 +27,66 @@ th {
   font-weight: 700;
 }
 
+.container {
+  max-width: 1571px;
+}
+
 /* ===========header================= */
 .call_numbers{
-  padding-top: 30px;
-  padding-bottom: 22px;
+  font-family: MonserratRegular;
+  font-size: 16px;
+  padding-top: 26px;
+  padding-bottom: 18px;
 }
 
 .btn-success {
   padding-bottom: 30px;
 }
 
+.call_back_btn {
+  font-size: 16px;
+  font-family: MonserratRegular;
+}
+
 
 .store_name h2{
+  font-family: ptserif;
+  font-size: 36px;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 35px;
+  padding-top: 26px;
+  padding-bottom: 6px;
 } 
 
 .goods_categories {
   display: flex;
   justify-content: space-around;
   text-transform: uppercase;
-  padding-bottom: 35px;
+  padding-bottom: 30px;
+}
+
+.goods_categories img{
+  color: black;
+
 }
 
 .cart_field {
-  padding-top: 30px;
-  padding-bottom: 20px;
-  /* display: flex;
-  justify-content: flex-end; */
+  padding-top: 25px;
+  padding-bottom: 16px;
   text-align: end;
 }
 
 .cart_field span {
+  color: #707070;
   padding-left: 20px;
+  font-family: MonserratRegular;
+}
+
+span .numbers_of_good {
+  color: #B7B7B7;
 }
 
 .call_back_btn {
-  width: 216px;
+  width: 246px;
   height: 38px;
   border-radius: 40px;
   background-color: #39B505;
@@ -59,13 +98,16 @@ th {
 }
 
 .search_goods {
-  border: 1px solid #B7B7B7;
-  border-radius: 30px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .search_goods input {
+  font-family: MonserratRegular;
+  font-size: 16px;
+  width: 75%;
   border: none;
-  margin: 6px 0px 5px 16px;
+  margin: 5px 0px 5px 16px;
 }
 
 .search_goods button {
@@ -74,6 +116,8 @@ th {
 }
 
 .search_goods form {
+  border: 1px solid #B7B7B7;
+  border-radius: 30px;
   width: 246px;
   height: 38px;
 }
@@ -127,7 +171,7 @@ ul.slick-dots {
 
 .slick-dots li button:before {
   content: '•';
-  font-size: 22px;
+  font-size: 36px;
   line-height: 20px;
   position: absolute;
   top: 0;
@@ -150,7 +194,7 @@ button.slick-prev.pull-left.slick-arrow {
   z-index: 1;
   align-self: center;
   margin: 0 auto;
-  left: 166px;
+  left: 20%;
 }
 
 button.slick-next.pull-right.slick-arrow {
@@ -162,7 +206,7 @@ button.slick-next.pull-right.slick-arrow {
   align-self: center;
   margin: 0 auto;
   transform: rotate(180deg);
-  right: 166px;
+  right: 20%;
 }
 
 .slick-prev:before {
@@ -192,6 +236,10 @@ button.slick-next.pull-right.slick-arrow {
 
 .card_slider {
   display: block;
+  width: 100%;
+}
+
+.card_slider img {
   width: 100%;
 }
 
@@ -347,6 +395,10 @@ button.slick-next.pull-right.slick-arrow {
   padding-right: 24px;
 }
 
+.delivery a {
+  text-decoration: none;
+}
+
 .footer_block {
   /* display: flex; */
   max-width: 1571px;
@@ -356,7 +408,6 @@ button.slick-next.pull-right.slick-arrow {
 	justify-content: space-between;
 	align-items: center;
 	align-content: center;
-  
 }
 
 .footer_social  {
