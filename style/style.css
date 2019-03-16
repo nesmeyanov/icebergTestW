@@ -572,3 +572,14 @@ button.slick-next.pull-right.slick-arrow {
   width: 502px;
   height: 106px;
 }
+
+.similar_goods_card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.comment_card {
+  margin-bottom: 30px;;
+}
