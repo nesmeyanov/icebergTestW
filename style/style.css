@@ -186,7 +186,7 @@ ul.slick-dots {
   display: flex;
 }
 
-button.slick-prev.pull-left.slick-arrow {
+button.slick_prev_slider.pull-left.slick-arrow {
   outline: none;
   border: none;
   background-color: transparent;
@@ -197,7 +197,7 @@ button.slick-prev.pull-left.slick-arrow {
   left: 20%;
 }
 
-button.slick-next.pull-right.slick-arrow {
+button.slick_next_slider.pull-right.slick-arrow {
   outline: none;
   border: none;
   background-color: transparent;
@@ -209,26 +209,24 @@ button.slick-next.pull-right.slick-arrow {
   right: 20%;
 }
 
-.slick-prev:before {
+.slick_prev_slider:before {
   background-image: url('/icons/down-arrow.png');
   background-size: 23px 43px;
   background-repeat: no-repeat;
   display: inline-block;
   border: none;
   color: black;
-  /* background-color: blue; */
   width: 23px; 
   height: 43px;
   content:"";
 }
-.slick-next:before {
+.slick_next_slider:before {
   background-image: url('/icons/down-arrow.png');
   background-size: 23px 43px;
   background-repeat: no-repeat;
   display: inline-block;
   border: none;
   color: black;
-  /* background-color: blue; */
   width: 23px; 
   height: 43px;
   content:"";
@@ -243,6 +241,10 @@ button.slick-next.pull-right.slick-arrow {
   width: 100%;
 }
 
+/* .slick-slide img {
+  display: inline-block;
+} */
+
 /* ==============popular================ */
 #popular {
   position: relative;
@@ -252,6 +254,38 @@ button.slick-next.pull-right.slick-arrow {
   padding: 65px 0 45px 0;
   max-width: 1571px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular_header h4 {
+  font-size: 24px;
+  font-family: MonserratBold;
+}
+
+.popular_card {
+  margin: 0 15px;
+}
+
+.popular_img {
+  display: flex;
+}
+
+.popular_img img:first-child {
+  vertical-align: top;
+  width: 82%;
+}
+
+.popular_img > img:nth-child(2) {
+  height: 50px;
+}
+
+.slick_prev_popular  {
+  margin-left: 10px;
+}
+
+.slick_prev_popular  img {
+  transform: rotate(180deg);
 }
 
 .all_popular_goods {
@@ -271,18 +305,38 @@ button.slick-next.pull-right.slick-arrow {
   justify-content: space-between;
 }
 
-.popular_img img:first-child {
-  vertical-align: top;
-  width: 82%;
-}
+
 
 .popular_img img {
   padding-top: 15px;
 }
 
+button.slick_prev_popular.slick-arrow {
+  background: none;
+  margin-right: 10px;
+  border: 1px solid #B7B7B7;
+}
+
+button.slick_next_popular.slick-arrow {
+  background: none;
+  margin-right: 10px;
+  border: 1px solid #B7B7B7;
+}
+
 .popular_text {
   text-align: center;
   padding-top: 30px;
+}
+
+.popular_text > h4 {
+  font-size: 16px;
+  font-family: MonserratBold;
+  color: #202020;
+}
+
+.popular_text > span {
+  font-family: MonserratRegular;
+  font-size: 14px;
 }
 
 .build {
@@ -292,9 +346,15 @@ button.slick-next.pull-right.slick-arrow {
 
 .price {
   font-weight: bold;
-  padding-top: 12px;
+  padding-top: 14 px;
   padding-bottom: 22px;
 }
+
+.price > span {
+  font-family: MonserratBold;
+  font-size: 16px;
+}
+
 /* ==============news================ */
 #news {
   position: relative;
@@ -304,6 +364,22 @@ button.slick-next.pull-right.slick-arrow {
   padding: 65px 0 45px 0;
   max-width: 1571px;
   margin: 0 auto;
+}
+
+.news_header > h2 {
+  font-family: MonserratBold;
+  font-size: 24px;
+}
+
+.news_text > h4 {
+  font-size: 16px;
+  font-family: MonserratBold;
+  color: #202020;
+}
+
+.news_text > span {
+  font-family: MonserratRegular;
+  font-size: 14px;
 }
 
 .all_news_goods {
@@ -322,6 +398,19 @@ button.slick-next.pull-right.slick-arrow {
   border: 1px solid #E8E8E8;
   justify-content: space-between;
 }
+
+button.slick_prev_news.slick-arrow {
+  background: none;
+  margin-right: 10px;
+  border: 1px solid #B7B7B7;
+}
+
+button.slick_next_news.slick-arrow {
+  background: none;
+  margin-right: 10px;
+  border: 1px solid #B7B7B7;
+}
+
 
 .news_img img:first-child {
   vertical-align: top;
@@ -391,12 +480,18 @@ button.slick-next.pull-right.slick-arrow {
   display: flex;
 }
 
+.footer_text_info a {
+  text-decoration: none;
+  color: #B7B7B7;
+}
+
 .delivery {
   padding-right: 24px;
 }
 
 .delivery a {
   text-decoration: none;
+  color: #B7B7B7;
 }
 
 .footer_block {

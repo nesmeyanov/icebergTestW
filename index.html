@@ -63,7 +63,9 @@
     </div>
   
     <div id="popular">
-      <div class="popular_header"><h2>Популярные</h2></div>
+      <div class="popular_header"><h4>Популярные</h4>
+      <div class="arrow_popular"></div>
+      </div>
       <div class="all_popular_goods">
         <div class="popular_card">
           <div class="popular_img">
@@ -131,11 +133,24 @@
             <div class="price"><span>3861грн</span></div>
           </div>
         </div>
+        <div class="popular_card">
+            <div class="popular_img">
+              <img src="/icons/popular_good_5.png" alt="popular goods">
+              <img src="/icons/add_to_cart.png" alt="cart">
+            </div>
+            <div class="popular_text">
+              <h4>Название товара</h4>
+              <span class="build">Производитель</span>
+              <div class="price"><span>3861грн</span></div>
+            </div>
+          </div>
       </div> 
     </div>
   
     <div id="news">
-      <div class="news_header"><h2>Новинки</h2></div>
+      <div class="news_header"><h2>Новинки</h2>
+      <div class="arrow_news"></div>
+      </div>
       <div class="all_news_goods">
         <div class="news_card">
           <div class="news_img">
@@ -237,7 +252,7 @@
           <div class="delivery">
             <a href="/pages/deliver.html">Доставка и оплата</a>
           </div>
-          <div class="company_info"><span>О компании</span></div>
+          <div class="company_info"><a href="/pages/about_us.html">О компании</a></div>
         </div>
         <div class="footer_social">
           <img src="/icons/instagram (4).png" alt="instagram">
@@ -261,43 +276,38 @@
   <script type="text/javascript">
     $('.slider_field').slick({
       dots: true,
-      // infinite: true,
+      infinite: true,
       speed: 300,
       slidesToShow: 1,
       adaptiveHeight: true,
-      prevArrow:"<button type='button' class='slick-prev pull-left'></button>",
-      nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
+      prevArrow:"<button type='button' class='slick-prev pull-left slick_prev_slider'></button>",
+      nextArrow:"<button type='button' class='slick-next pull-right slick_next_slider'></button>"
     });
   </script>
-  <script>
-  $('.all_popular_goods').slick({
-  speed: 300,
-  slidesToShow: 6,
-  slidesToScroll: 4,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-});</script>
+  <script type="text/javascript">
+    $('.all_popular_goods').slick({
+      // autoplay:true,
+      infinite: true,
+      slidesToScroll: 4,
+      slidesToShow: 6,
+      appendArrows: '.arrow_popular',
+      prevArrow: '<button type="button" class="slick_prev_popular"><img src="/icons/arrow.png"></button>',
+      nextArrow: '<button type="button" class="slick_next_popular"><img src="/icons/arrow.png"></button>',
+    });
+
+</script>
+
+<script type="text/javascript">
+  $('.all_news_goods').slick({
+    // // autoplay:true,
+    infinite: true,
+    slidesToScroll: 4,
+    slidesToShow: 6,
+    appendArrows: '.arrow_news',
+    prevArrow: '<button type="button" class="slick_prev_news"><img src="/icons/arrow.png"></button>',
+    nextArrow: '<button type="button" class="slick_next_news"><img src="/icons/arrow.png"></button>',
+  });
+
+</script>
 </body>
 </html>
