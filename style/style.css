@@ -31,6 +31,19 @@ th {
   max-width: 1571px;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h4 {
+  text-decoration: none;
+  color: #202020;
+}
+
 /* ===========header================= */
 .call_numbers{
   font-family: MonserratRegular;
@@ -305,8 +318,6 @@ button.slick_next_slider.pull-right.slick-arrow {
   justify-content: space-between;
 }
 
-
-
 .popular_img img {
   padding-top: 15px;
 }
@@ -342,6 +353,8 @@ button.slick_next_popular.slick-arrow {
 .build {
   color: #B7B7B7;
   padding-top: 14px;
+  font-family: MonserratRegular;
+  font-size: 14px;
 }
 
 .price {
@@ -353,6 +366,7 @@ button.slick_next_popular.slick-arrow {
 .price > span {
   font-family: MonserratBold;
   font-size: 16px;
+  color: #000000;
 }
 
 /* ==============news================ */
@@ -364,6 +378,8 @@ button.slick_next_popular.slick-arrow {
   padding: 65px 0 45px 0;
   max-width: 1571px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .news_header > h2 {
@@ -380,6 +396,31 @@ button.slick_next_popular.slick-arrow {
 .news_text > span {
   font-family: MonserratRegular;
   font-size: 14px;
+}
+.slick_prev_news  {
+  margin-left: 10px;
+}
+
+.slick_prev_news  img {
+  transform: rotate(180deg);
+}
+
+.all_news_goods {
+  margin: 0 auto;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+  align-content: stretch;
+  max-width: 1571px;
+}
+
+.news_card {
+  margin: 0 15px;
+  max-width: 236px;
+  border: 1px solid #E8E8E8;
+  justify-content: space-between;
 }
 
 .all_news_goods {
@@ -411,9 +452,16 @@ button.slick_next_news.slick-arrow {
   border: 1px solid #B7B7B7;
 }
 
+.news_img {
+  display: flex;
+}
+
+.news_img img:nth-child(2) {
+  height: 50px;
+}
 
 .news_img img:first-child {
-  vertical-align: top;
+  /* vertical-align: top; */
   width: 82%;
 }
 
@@ -424,11 +472,6 @@ button.slick_next_news.slick-arrow {
 .news_text {
   text-align: center;
   padding-top: 30px;
-}
-
-.build {
-  color: #B7B7B7;
-  padding-top: 14px;
 }
 
 .price {
@@ -447,10 +490,17 @@ button.slick_next_news.slick-arrow {
   margin: 0 auto;
 }
 
+.brands_header{
+  display: flex;
+  justify-content: space-between;
+}
+
 .brands_container h4 {
   padding-bottom: 45px;
+  font-family: MonserratBold;
 }
 .brands_images {
+  padding-bottom: 70px;
   display: flex;
   justify-content: space-around;
 }
@@ -458,7 +508,10 @@ button.slick_next_news.slick-arrow {
 .about_brands {
   max-width: 1571px;
   margin: 0 auto;
-
+  color: #B7B7B7;
+  text-align: center;
+  font-family: MonseratRegular;
+  font-size: 14px;
 }
 
 .site_name {
@@ -546,6 +599,11 @@ button.slick_next_news.slick-arrow {
   text-align: center;
 }
 
+.goods_text > h4 {
+  font-family: MonserratRegular;
+  font-size: 16px;
+}
+
 /* ========delivery page=========== */
 #deliverypay_paying {
   max-width: 1571px;
@@ -555,6 +613,11 @@ button.slick_next_news.slick-arrow {
 
 .category_list {
   display: flex;
+  /* margin: ; */
+}
+
+.category_list_item {
+  margin: 0 20px;
 }
 
 /* ============about_us page========= */
@@ -568,9 +631,9 @@ button.slick_next_news.slick-arrow {
   max-width: 1571px;
 }
 
-.table {
-  /* max-width: 70%; */
-}
+/* .table {
+  max-width: 70%;
+} */
 
 .table td, .table th {
   border-top: none;
